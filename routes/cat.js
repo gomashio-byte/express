@@ -6,7 +6,7 @@ const cors = require('cors');
 router.use(cors());
 
 router.get('/', async (req, res) => {
-request('https://dog.ceo/api/breeds/image/random/2', function (error, response,
+request('https://api.thecatapi.com/v1/images/search', function (error, response,
 body) {
 if (!error && response.statusCode == 200) {
 const data = JSON.parse(body);
